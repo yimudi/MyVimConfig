@@ -63,13 +63,21 @@ set fileformats=unix,dos,mac
 nmap <Leader>e :tabnew $HOME/.vimrc<CR>
 let $VIMFILES = $HOME.'/.vim'
 
-set tags+=~/.vim/tags/cpp
-set tags+=~/.vim/tags/gl
-set tags+=~/.vim/tags/sdl
-set tags+=~/.vim/tags/qt4
-set tags+=./tags,../tags,./../tags,./../../tags,./../../../tags,./../../../../tags,./../../../../../tags,./../../../../../../tags,./../../../../../../../tags,./../../../../../../../../tags,./../../../../../../../../../tags,./../../../../../../../../../../tags
+set tags+=~/.vim/systags
+" set tags+=~/.vim/tags/cpp
+" set tags+=~/.vim/tags/gl
+" set tags+=~/.vim/tags/sdl
+" set tags+=~/.vim/tags/qt4
+" set tags+=./tags,../tags,./../tags,./../../tags,./../../../tags,./../../../../tags,./../../../../../tags,./../../../../../../tags,./../../../../../../../tags,./../../../../../../../../tags,./../../../../../../../../../tags,./../../../../../../../../../../tags
 "build tags of your own  project with Ctrl-F12
 "map <C-F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+
+" <C-Tab> <C-S-Tab>分别向前、向后循环切换每个buffer
+let g:miniBufExplMapCTabSwitchBufs = 1 
+" 用<C-箭头键>切换到上下左右窗口中去
+let g:miniBufExplMapWindowNavArrows = 1
+" 则可以用<C-h,j,k,l>切换到上下左右的窗口中去
+let g:miniBufExplMapWindowNavVim = 1
 
 "0mniCppComplete
 let OmniCpp_NamespaceSearch = 1
@@ -103,8 +111,6 @@ imap [ []<ESC>i
 " set ( --> () 
 imap ( ()<ESC>i
 " 设置在插入状态下上下左右移动
-" imap <C-h> <Left>
-" imap <C-j>  
 imap <C-k> <Up>
 imap <C-l> <Right>
 
@@ -128,7 +134,7 @@ let Tlist_File_Fold_Auto_Close=1
 let Tlist_GainFocus_On_ToggleOpen=1
 let Tlist_Process_File_Always=1
 let Tlist_WinHeight=10
-let Tlist_WinWidth=45
+let Tlist_WinWidth=38
 let Tlist_Use_Horiz_Window=0
 nmap <F3> :Tlist<CR>
 
