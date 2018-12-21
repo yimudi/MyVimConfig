@@ -113,6 +113,8 @@ imap ( ()<ESC>i
 " 设置在插入状态下上下左右移动
 imap <C-k> <Up>
 imap <C-l> <Right>
+" <Ctrl-z> mapping to :w<CR><Ctrl-m>
+nmap <C-m> :w<CR><C-z>
 
 "自动加载树目录
 nmap <F1> :NERDTreeToggle<CR>
