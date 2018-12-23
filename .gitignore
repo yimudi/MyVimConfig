@@ -1,2 +1,5 @@
-.vim/systags
-.vim/a.txt
+*.txt
+
+./.vim/systags
+./.vim/a.txt
+./.vim/c.txt
