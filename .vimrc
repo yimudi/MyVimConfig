@@ -4,7 +4,6 @@ let g:mapleader=","
 
 set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936,gb18030 
 set tabstop=4
-
 set nocompatible            " 关闭 vi 兼容模式
 syntax on                   " 自动语法高亮
 filetype plugin indent on   " 开启插件
@@ -50,6 +49,7 @@ colorscheme desert        " 设定配色方案
 set nolist
 set listchars=tab:>-,trail:-
 
+set colorcolumn=81          " vim 80 char limited
 
 " 设置鼠标
 " set mouse=a
@@ -113,8 +113,8 @@ imap ( ()<ESC>i
 " 设置在插入状态下上下左右移动
 imap <C-k> <Up>
 imap <C-l> <Right>
-" <Ctrl-z> mapping to :w<CR><Ctrl-m>
-nmap <C-m> :w<CR><C-z>
+" <Ctrl-z> mapping to :wa<CR><Ctrl-m>
+nmap <C-m> :wa<CR><C-z>
 
 "自动加载树目录
 nmap <F1> :NERDTreeToggle<CR>
@@ -140,6 +140,31 @@ let Tlist_WinWidth=38
 let Tlist_Use_Horiz_Window=0
 nmap <F3> :Tlist<CR>
 
+" rainbow
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+let g:rainbow_conf = {
+	\	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+	\	'ctermfgs': ['darkred', 'darkmagenta', 'blue', 'brown', 'darkgreen', 'lightgray', 'lightmagenta'],
+	\	'operators': '_,_',
+	\	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+	\	'separately': {
+	\		'*': {},
+	\		'tex': {
+	\			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+	\		},
+	\		'lisp': {
+	\			'guifgs': ['royalblue3', 'red', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+	\		},
+	\		'vim': {
+	\			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+	\		},
+	\		'html': {
+	\			'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+	\		},
+	\		'css': 0,
+	\	}
+	\}
+
 " java支持 
 " http://www.cnblogs.com/wds128/p/4479941.html 
 setlocal omnifunc=javacomplete#Complete
@@ -156,6 +181,7 @@ if has('autocmd')
 endif
 silent! colorscheme eldar " Custom color scheme
 
-hi comment ctermfg=4
+" 注释：深灰色
+hi comment ctermfg=darkgrey
 " set Search highlight
 hi Search term=reverse cterm=bold ctermbg=1 gui=bold guibg=Red
