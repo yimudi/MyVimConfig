@@ -63,8 +63,9 @@ set fileformats=unix,dos,mac
 nmap <Leader>e :tabnew $HOME/.vimrc<CR>
 let $VIMFILES = $HOME.'/.vim'
 
-set tags+=~/.vim/systags
-" set tags+=~/.vim/tags/cpp
+set tags+=~/.vim/tags/libc6
+" set tags+=~/.vim/tags/clib_h
+set tags+=~/.vim/tags/cpp
 " set tags+=~/.vim/tags/gl
 " set tags+=~/.vim/tags/sdl
 " set tags+=~/.vim/tags/qt4
@@ -78,6 +79,7 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplMapWindowNavArrows = 1
 " 则可以用<C-h,j,k,l>切换到上下左右的窗口中去
 let g:miniBufExplMapWindowNavVim = 1
+hi MBEChanged guibg=darkblue ctermbg=darkblue 
 
 "0mniCppComplete
 let OmniCpp_NamespaceSearch = 1
@@ -144,7 +146,7 @@ nmap <F3> :Tlist<CR>
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 let g:rainbow_conf = {
 	\	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-	\	'ctermfgs': ['darkred', 'darkmagenta', 'blue', 'brown', 'darkgreen', 'lightgray', 'lightmagenta'],
+	\	'ctermfgs': ['darkred', 'darkmagenta', 'blue', 'brown', 'darkgreen', 'lightgray','lightmagenta'],
 	\	'operators': '_,_',
 	\	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
 	\	'separately': {
@@ -181,7 +183,6 @@ if has('autocmd')
 endif
 silent! colorscheme eldar " Custom color scheme
 
-" 注释：深灰色
 hi comment ctermfg=darkgrey
 " set Search highlight
 hi Search term=reverse cterm=bold ctermbg=1 gui=bold guibg=Red
