@@ -1,64 +1,65 @@
-"ÉèÖÃleaderÎª
+"è®¾ç½®leaderä¸º
 let mapleader=","
 let g:mapleader=","
 
 set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936,gb18030 
 set tabstop=4
-set nocompatible            " ¹Ø±Õ vi ¼æÈİÄ£Ê½
-syntax on                   " ×Ô¶¯Óï·¨¸ßÁÁ
-filetype plugin indent on   " ¿ªÆô²å¼ş
-set number                  " ÏÔÊ¾ĞĞºÅ
-set ruler                   " ÏÔÊ¾ĞĞºÍÁĞ
-set nocursorline            " ²»Í»³öÏÔÊ¾µ±Ç°ĞĞ
-set shiftwidth=4            " Éè¶¨ << ºÍ >> ÃüÁîÒÆ¶¯Ê±µÄ¿í¶ÈÎª 4
-set softtabstop=4           " Ê¹µÃ°´ÍË¸ñ¼üÊ±¿ÉÒÔÒ»´ÎÉ¾µô 4 ¸ö¿Õ¸ñ
-set nobackup                " ¸²¸ÇÎÄ¼şÊ±²»±¸·İ
+set nocompatible            " å…³é—­ vi å…¼å®¹æ¨¡å¼
+syntax on                   " è‡ªåŠ¨è¯­æ³•é«˜äº®
+filetype plugin indent on   " å¼€å¯æ’ä»¶
+set number                  " æ˜¾ç¤ºè¡Œå·
+set ruler                   " æ˜¾ç¤ºè¡Œå’Œåˆ—
+set nocursorline            " ä¸çªå‡ºæ˜¾ç¤ºå½“å‰è¡Œ
+set shiftwidth=4            " è®¾å®š << å’Œ >> å‘½ä»¤ç§»åŠ¨æ—¶çš„å®½åº¦ä¸º 4
+set softtabstop=4           " ä½¿å¾—æŒ‰é€€æ ¼é”®æ—¶å¯ä»¥ä¸€æ¬¡åˆ æ‰ 4 ä¸ªç©ºæ ¼
+set nobackup                " è¦†ç›–æ–‡ä»¶æ—¶ä¸å¤‡ä»½
 set nowb
-set autochdir               " ×Ô¶¯ÇĞ»»µ±Ç°Ä¿Â¼Îªµ±Ç°ÎÄ¼şËùÔÚµÄÄ¿Â¼
-set backupcopy=yes          " ÉèÖÃ±¸·İÊ±µÄĞĞÎªÎª¸²¸Ç
+set autochdir               " è‡ªåŠ¨åˆ‡æ¢å½“å‰ç›®å½•ä¸ºå½“å‰æ–‡ä»¶æ‰€åœ¨çš„ç›®å½•
+set backupcopy=yes          " è®¾ç½®å¤‡ä»½æ—¶çš„è¡Œä¸ºä¸ºè¦†ç›–
 " set autoread                " set to auto read when a file changed from the outside
-set ignorecase smartcase    " ËÑË÷Ê±ºöÂÔ´óĞ¡Ğ´£¬µ«ÔÚÓĞÒ»¸ö»òÒÔÉÏ´óĞ´×ÖÄ¸Ê±ÈÔ´óĞ¡Ğ´Ãô¸Ğ
-" set nowrapscan              " ½ûÖ¹ÔÚËÑË÷µ½ÎÄ¼şÁ½¶ËÊ±ÖØĞÂËÑË÷
-set incsearch               " ÊäÈëËÑË÷ÄÚÈİÊ±¾ÍÏÔÊ¾ËÑË÷½á¹û
-set hlsearch                " ËÑË÷Ê±¸ßÁÁÏÔÊ¾±»ÕÒµ½µÄÎÄ±¾
-set noerrorbells            " ¹Ø±Õ´íÎóĞÅÏ¢ÏìÁå
-set novisualbell            " ¹Ø±ÕÊ¹ÓÃ¿ÉÊÓÏìÁå´úÌæºô½Ğ
-set t_vb=                   " ÖÃ¿Õ´íÎóÁåÉùµÄÖÕ¶Ë´úÂë
-set showmatch               " ²åÈëÀ¨ºÅÊ±£¬¶ÌÔİµØÌø×ªµ½Æ¥ÅäµÄ¶ÔÓ¦À¨ºÅ
-set matchtime=2             " ¶ÌÔİÌø×ªµ½Æ¥ÅäÀ¨ºÅµÄÊ±¼ä
-" set nowrap                  " ²»×Ô¶¯»»ĞĞ
-set magic                  " ÏÔÊ¾À¨ºÅÅä¶ÔÇé¿ö
-set hidden                  " ÔÊĞíÔÚÓĞÎ´±£´æµÄĞŞ¸ÄÊ±ÇĞ»»»º³åÇø£¬´ËÊ±µÄĞŞ¸ÄÓÉ vim ¸ºÔğ±£´æ
-set smartindent             " ¿ªÆôĞÂĞĞÊ±Ê¹ÓÃÖÇÄÜ×Ô¶¯Ëõ½ø
+set ignorecase smartcase    " æœç´¢æ—¶å¿½ç•¥å¤§å°å†™ï¼Œä½†åœ¨æœ‰ä¸€ä¸ªæˆ–ä»¥ä¸Šå¤§å†™å­—æ¯æ—¶ä»å¤§å°å†™æ•æ„Ÿ
+" set nowrapscan              " ç¦æ­¢åœ¨æœç´¢åˆ°æ–‡ä»¶ä¸¤ç«¯æ—¶é‡æ–°æœç´¢
+set incsearch               " è¾“å…¥æœç´¢å†…å®¹æ—¶å°±æ˜¾ç¤ºæœç´¢ç»“æœ
+set hlsearch                " æœç´¢æ—¶é«˜äº®æ˜¾ç¤ºè¢«æ‰¾åˆ°çš„æ–‡æœ¬
+set noerrorbells            " å…³é—­é”™è¯¯ä¿¡æ¯å“é“ƒ
+set novisualbell            " å…³é—­ä½¿ç”¨å¯è§†å“é“ƒä»£æ›¿å‘¼å«
+set t_vb=                   " ç½®ç©ºé”™è¯¯é“ƒå£°çš„ç»ˆç«¯ä»£ç 
+set showmatch               " æ’å…¥æ‹¬å·æ—¶ï¼ŒçŸ­æš‚åœ°è·³è½¬åˆ°åŒ¹é…çš„å¯¹åº”æ‹¬å·
+set matchtime=2             " çŸ­æš‚è·³è½¬åˆ°åŒ¹é…æ‹¬å·çš„æ—¶é—´
+" set nowrap                  " ä¸è‡ªåŠ¨æ¢è¡Œ
+set magic                  " æ˜¾ç¤ºæ‹¬å·é…å¯¹æƒ…å†µ
+set hidden                  " å…è®¸åœ¨æœ‰æœªä¿å­˜çš„ä¿®æ”¹æ—¶åˆ‡æ¢ç¼“å†²åŒºï¼Œæ­¤æ—¶çš„ä¿®æ”¹ç”± vim è´Ÿè´£ä¿å­˜
+set smartindent             " å¼€å¯æ–°è¡Œæ—¶ä½¿ç”¨æ™ºèƒ½è‡ªåŠ¨ç¼©è¿›
 set backspace=indent,eol,start
-                            " ²»Éè¶¨ÔÚ²åÈë×´Ì¬ÎŞ·¨ÓÃÍË¸ñ¼üºÍ Delete ¼üÉ¾³ı»Ø³µ·û
-set cmdheight=1             " Éè¶¨ÃüÁîĞĞµÄĞĞÊıÎª 1
-set laststatus=1            " ÏÔÊ¾×´Ì¬À¸ (Ä¬ÈÏÖµÎª 1, ÎŞ·¨ÏÔÊ¾×´Ì¬À¸)
-" set foldenable              " ¿ªÊ¼ÕÛµş
-" set foldmethod=syntax       " ÉèÖÃÓï·¨ÕÛµş
-" set foldcolumn=0            " ÉèÖÃÕÛµşÇøÓòµÄ¿í¶È
-" setlocal foldlevel=1        " ÉèÖÃÕÛµş²ãÊıÎª
-" set foldclose=all           " ÉèÖÃÎª×Ô¶¯¹Ø±ÕÕÛµş
-" colorscheme colorzone       " Éè¶¨ÅäÉ«·½°¸
+                            " ä¸è®¾å®šåœ¨æ’å…¥çŠ¶æ€æ— æ³•ç”¨é€€æ ¼é”®å’Œ Delete é”®åˆ é™¤å›è½¦ç¬¦
+set cmdheight=1             " è®¾å®šå‘½ä»¤è¡Œçš„è¡Œæ•°ä¸º 1
+set laststatus=1            " æ˜¾ç¤ºçŠ¶æ€æ  (é»˜è®¤å€¼ä¸º 1, æ— æ³•æ˜¾ç¤ºçŠ¶æ€æ )
+" set foldenable              " å¼€å§‹æŠ˜å 
+" set foldmethod=syntax       " è®¾ç½®è¯­æ³•æŠ˜å 
+" set foldcolumn=0            " è®¾ç½®æŠ˜å åŒºåŸŸçš„å®½åº¦
+" setlocal foldlevel=1        " è®¾ç½®æŠ˜å å±‚æ•°ä¸º
+" set foldclose=all           " è®¾ç½®ä¸ºè‡ªåŠ¨å…³é—­æŠ˜å 
+" colorscheme colorzone       " è®¾å®šé…è‰²æ–¹æ¡ˆ
 set background=dark
-" colorscheme solarized         " Éè¶¨ÅäÉ«·½°¸
-colorscheme desert        " Éè¶¨ÅäÉ«·½°¸
+" colorscheme solarized         " è®¾å®šé…è‰²æ–¹æ¡ˆ
+colorscheme default
+" colorscheme desert        " è®¾å®šé…è‰²æ–¹æ¡ˆ
 " set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ [%{(&fenc==\"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")}]\ %c:%l/%L%)\ 
-                            " ÉèÖÃÔÚ×´Ì¬ĞĞÏÔÊ¾µÄĞÅÏ¢
-" ÏÔÊ¾Tab·û
+                            " è®¾ç½®åœ¨çŠ¶æ€è¡Œæ˜¾ç¤ºçš„ä¿¡æ¯
+" æ˜¾ç¤ºTabç¬¦
 set nolist
 set listchars=tab:>-,trail:-
 
 set colorcolumn=81          " vim 80 char limited
 
-" ÉèÖÃÊó±ê
+" è®¾ç½®é¼ æ ‡
 " set mouse=a
 
-"ÉèÖÃ´úÂëÕÛµş·½Ê½Îª ÊÖ¹¤  indent
+"è®¾ç½®ä»£ç æŠ˜å æ–¹å¼ä¸º æ‰‹å·¥  indent
 "set foldmethod=indent
-"ÉèÖÃ´úÂë¿éÕÛµşºóÏÔÊ¾µÄĞĞÊı
+"è®¾ç½®ä»£ç å—æŠ˜å åæ˜¾ç¤ºçš„è¡Œæ•°
 set foldexpr=1
-"±à¼­vimÅäÖÃÎÄ¼ş
+"ç¼–è¾‘vimé…ç½®æ–‡ä»¶
 set fileformats=unix,dos,mac
 nmap <Leader>e :tabnew $HOME/.vimrc<CR>
 let $VIMFILES = $HOME.'/.vim'
@@ -73,11 +74,11 @@ set tags+=~/.vim/tags/cpp
 "build tags of your own  project with Ctrl-F12
 "map <C-F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
-" <C-Tab> <C-S-Tab>·Ö±ğÏòÇ°¡¢ÏòºóÑ­»·ÇĞ»»Ã¿¸öbuffer
+" <C-Tab> <C-S-Tab>åˆ†åˆ«å‘å‰ã€å‘åå¾ªç¯åˆ‡æ¢æ¯ä¸ªbuffer
 let g:miniBufExplMapCTabSwitchBufs = 1 
-" ÓÃ<C-¼ıÍ·¼ü>ÇĞ»»µ½ÉÏÏÂ×óÓÒ´°¿ÚÖĞÈ¥
+" ç”¨<C-ç®­å¤´é”®>åˆ‡æ¢åˆ°ä¸Šä¸‹å·¦å³çª—å£ä¸­å»
 let g:miniBufExplMapWindowNavArrows = 1
-" Ôò¿ÉÒÔÓÃ<C-h,j,k,l>ÇĞ»»µ½ÉÏÏÂ×óÓÒµÄ´°¿ÚÖĞÈ¥
+" åˆ™å¯ä»¥ç”¨<C-h,j,k,l>åˆ‡æ¢åˆ°ä¸Šä¸‹å·¦å³çš„çª—å£ä¸­å»
 let g:miniBufExplMapWindowNavVim = 1
 hi MBEChanged guibg=darkblue ctermbg=darkblue 
 
@@ -98,27 +99,27 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 
 autocmd FileType python setlocal et sta sw=4 sts=4
 
-"²»Í¬ÎÄ¼şÀàĞÍµÄËõ½ø
+"ä¸åŒæ–‡ä»¶ç±»å‹çš„ç¼©è¿›
 au FileType html,python,vim,javascript,phtml setl shiftwidth=2
 au FileType html,python,vim,javascript,phtml setl tabstop=2
 au FileType java,php setl shiftwidth=4
 au FileType java,php setl tabstop=4
 set completeopt=longest,menu
 
-" ÉèÖÃ´óÀ¨ºÅ×Ô¶¯²¹È«
+" è®¾ç½®å¤§æ‹¬å·è‡ªåŠ¨è¡¥å…¨
 " imap { {}<ESC>i<CR><ESC>O
 imap { {}<ESC>i
 " set [ --> []
 imap [ []<ESC>i
 " set ( --> () 
 imap ( ()<ESC>i
-" ÉèÖÃÔÚ²åÈë×´Ì¬ÏÂÉÏÏÂ×óÓÒÒÆ¶¯
+" è®¾ç½®åœ¨æ’å…¥çŠ¶æ€ä¸‹ä¸Šä¸‹å·¦å³ç§»åŠ¨
 imap <C-k> <Up>
 imap <C-l> <Right>
 " <Ctrl-z> mapping to :wa<CR><Ctrl-m>
 nmap <C-m> :wa<CR><C-z>
 
-"×Ô¶¯¼ÓÔØÊ÷Ä¿Â¼
+"è‡ªåŠ¨åŠ è½½æ ‘ç›®å½•
 nmap <F1> :NERDTreeToggle<CR>
 
 "taglist 
@@ -147,7 +148,7 @@ let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 let g:rainbow_conf = {
 	\	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
 	\	'ctermfgs': ['darkred', 'darkmagenta', 'blue', 'brown', 'darkgreen', 'lightgray','lightmagenta'],
-	\	'operators': '_,_',
+	\	'operators': '',
 	\	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
 	\	'separately': {
 	\		'*': {},
@@ -167,7 +168,7 @@ let g:rainbow_conf = {
 	\	}
 	\}
 
-" javaÖ§³Ö 
+" javaæ”¯æŒ 
 " http://www.cnblogs.com/wds128/p/4479941.html 
 setlocal omnifunc=javacomplete#Complete
 autocmd FileType java set omnifunc=javacomplete#Complete
@@ -183,6 +184,6 @@ if has('autocmd')
 endif
 silent! colorscheme eldar " Custom color scheme
 
-hi comment ctermfg=darkgrey
+hi comment ctermfg=grey
 " set Search highlight
 hi Search term=reverse cterm=bold ctermbg=1 gui=bold guibg=Red
