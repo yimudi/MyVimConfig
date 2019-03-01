@@ -41,7 +41,6 @@ set laststatus=1            " 显示状态栏 (默认值为 1, 无法显示状�
 " set foldclose=all           " 设置为自动关闭折叠
 " colorscheme colorzone       " 设定配色方案
 set background=dark
-" colorscheme solarized         " 设定配色方案
 colorscheme default
 " colorscheme desert        " 设定配色方案
 " set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ [%{(&fenc==\"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")}]\ %c:%l/%L%)\ 
@@ -187,3 +186,6 @@ silent! colorscheme eldar " Custom color scheme
 hi comment ctermfg=grey
 " set Search highlight
 hi Search term=reverse cterm=bold ctermbg=1 gui=bold guibg=Red
+
+" 禁止换行自动添加注释
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
