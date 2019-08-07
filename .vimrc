@@ -40,9 +40,8 @@ set laststatus=1            " 显示状态栏 (默认值为 1, 无法显示状�
 " setlocal foldlevel=1        " 设置折叠层数为
 " set foldclose=all           " 设置为自动关闭折叠
 " colorscheme colorzone       " 设定配色方案
-set background=dark
-colorscheme default
-" colorscheme desert        " 设定配色方案
+"colorscheme desert
+colorscheme default        " 设定配色方案
 " set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ [%{(&fenc==\"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")}]\ %c:%l/%L%)\ 
                             " 设置在状态行显示的信息
 " 显示Tab符
@@ -146,7 +145,7 @@ nmap <F3> :Tlist<CR>
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 let g:rainbow_conf = {
 	\	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-	\	'ctermfgs': ['darkred', 'darkmagenta', 'blue', 'brown', 'darkgreen', 'lightgray','lightmagenta'],
+	\	'ctermfgs': ['darkmagenta', 'blue', 'brown', 'darkgreen', 'lightgray', 'darkred', ],
 	\	'operators': '',
 	\	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
 	\	'separately': {
@@ -185,7 +184,8 @@ silent! colorscheme eldar " Custom color scheme
 
 hi comment ctermfg=grey
 " set Search highlight
-hi Search term=reverse cterm=bold ctermbg=1 gui=bold guibg=Red
+hi Search term=reverse cterm=bold ctermbg=2 gui=bold guibg=Red
 
 " 禁止换行自动添加注释
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
